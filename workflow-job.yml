@@ -1,0 +1,7 @@
+src:
+  class: File
+  path: circle.mp
+
+texfile:
+  class: File
+  path: document.tex

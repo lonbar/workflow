@@ -1,0 +1,11 @@
+circle:
+  class: File
+  path: circle.mp
+
+postscript:
+  class: File
+  path: circle.eps
+
+docsrc: 
+  class: File
+  path: document.tex
