@@ -4,13 +4,14 @@ cwlVersion: v1.0
 class: Workflow
 
 inputs:
-    src: File
-    texfile: File
+  src:
+    type: File
+  texfile:
+    type: File
     
 outputs:
   proof:
     type: File
-    #outputSource: makepdf/newpdf
     outputSource: makedoc/document
 
 steps:
@@ -30,4 +31,5 @@ steps:
     run: typeset.cwl
     in:
       docsrc: texfile 
+      image: makepdf/newpdf 
     out: [document]

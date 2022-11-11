@@ -5,10 +5,10 @@ class: CommandLineTool
 
 baseCommand: pdflatex
 
-#requirements:
-#    - class: InitialWorkDirRequirement
-#      listing:
-#        - $(inputs.docsrc)
+requirements:
+    - class: InitialWorkDirRequirement
+      listing:
+        - $(inputs.image)
      
 inputs:
   docsrc:
@@ -16,9 +16,15 @@ inputs:
     inputBinding:
       position: 2
 #      valueFrom: $(self.basename)
+  image:
+    type: File
 
 outputs:
   document:
     type: File
     outputBinding:
-      glob: "*.pdf"
+      glob: $(inputs.docsrc.nameroot).pdf
+
+hints:
+  DockerRequirement:
+    dockerPull: texlive/texlive:latest

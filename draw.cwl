@@ -15,3 +15,7 @@ outputs:
     type: File
     outputBinding: 
       glob: '*.eps'
+
+hints:
+  DockerRequirement:
+    dockerPull: texlive/texlive:latest

@@ -22,3 +22,7 @@ outputs:
     type: File
     outputBinding:
       glob: "*.pdf"
+
+hints:
+  DockerRequirement:
+    dockerPull: texlive/texlive:latest
