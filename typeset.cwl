@@ -1,6 +1,4 @@
-#!/usr/bin/env cwl-runner
-
-cwlVersion: v1.0
+cwlVersion: v1.2
 class: CommandLineTool
 
 baseCommand: pdflatex
@@ -15,7 +13,6 @@ inputs:
     type: File
     inputBinding:
       position: 2
-#      valueFrom: $(self.basename)
   image:
     type: File
 
